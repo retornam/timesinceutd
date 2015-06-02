@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="./assets/css/flapper.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <object data="./assets/img/man-utd.svg" type="image/svg+xml"></object>
+        <div id="other">
+            <p>Manchester United FC last won a trophy,</p>
+            <div id="lastwon">
+            </div>
+        </div>
+
+    <script src="./assets/js/jquery-2.1.4.min.js"></script>
+    <script src="./assets/js/jquery.flapper.js"></script>
+    <script src="./assets/js/moment.js"></script>
+    <script>
+        var checked = function(){
+            var options = {
+                width: 13,             // number of digits
+                format: null,         // options for jquery.numberformatter, if loaded
+                align: 'right',       // aligns values to the left or right of display
+                padding: '&nbsp;',    // value to use for padding
+                chars: null,          // array of characters that Flapper can display
+                chars_preset: 'alpha',  // 'num', 'hexnum', 'alpha' or 'alphanum'
+                timing: 250,          // the maximum timing for digit animation
+                min_timing: 10,       // the minimum timing for digit animation
+                threshhold: 100, 
+            }
+            x = moment("20130421", "YYYYMMDDD").fromNow();
+            $('#lastwon').flapper(options).val(x).change();
+        }
+
+        window.onload= checked;
+
+
+    </script>
+    </body>
+</html>

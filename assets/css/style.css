@@ -1,0 +1,19 @@
+body{
+    background-color: #C60000;
+    margin: 0px;
+    padding: 0px;
+}
+
+object{
+    height: 200px;
+    width: 200px;
+    float: right;
+}
+#other {
+    margin: 0px 0px 24px 0px;
+    padding: 24px;
+    font-weight: normal;
+    font-size: 80px;
+    text-decoration: none;
+    color: white;
+}
